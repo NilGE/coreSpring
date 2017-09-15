@@ -1,5 +1,6 @@
 package com.neilge.demo;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;

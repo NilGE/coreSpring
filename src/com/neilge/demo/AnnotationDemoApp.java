@@ -13,8 +13,14 @@ public class AnnotationDemoApp {
 
         Coach coach = context.getBean("tennisCoach", Coach.class);
 
-        System.out.println(coach.getDailyWorkout());
-        System.out.println(coach.getDailyFortune());
+        Coach coach1 = context.getBean("tennisCoach", Coach.class);
+
+        boolean isSame = (coach == coach1);
+
+        System.out.println("\nPointing to the same object: " + isSame);
+
+        System.out.println("\nMemory location for coach: " + coach);
+        System.out.println("\nMemory location for coach1: " + coach1);
 
         context.close();
     }
