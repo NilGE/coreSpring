@@ -7,31 +7,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:sport.properties" />
+
+    <!-- add entry to enable component scanning -->
+    <context:component-scan base-package="com.neilge.demo" />
 
     <!-- Define your beans here -->
 
     <!-- define the dependency -->
-    <bean id="myFortuneService"
-          class="com.neilge.demo.HappyFortuneService">
-    </bean>
-
-    <bean id="trackCoach"
-          class="com.neilge.demo.TrackCoach">
-        <constructor-arg ref="myFortuneService" />
-    </bean>
-
-    <bean id="baseballCoach"
-        class="com.neilge.demo.BaseballCoach">
-        <constructor-arg ref="myFortuneService" />
-    </bean>
-
-    <bean id="cricketCoach"
-        class="com.neilge.demo.CricketCoach">
-        <property name="fortuneService" ref="myFortuneService" />
-        <property name="emailAddress" value="${foo.email}" />
-        <property name="team" value="${foo.team}" />
-    </bean>
 </beans>
 
 

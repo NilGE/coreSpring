@@ -6,13 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author neilge
  * @since 2017-09-15
  */
-public class BeanLifeCycleDemoApp {
+public class AnnotationDemoApp {
 
     public static void main(String[] args) {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
-
-        Coach coach = context.getBean("trackCoach", Coach.class);
+        Coach coach = context.getBean("tennisCoach", Coach.class);
 
         System.out.println(coach.getDailyWorkout());
 
