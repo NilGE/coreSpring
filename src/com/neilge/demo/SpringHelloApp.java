@@ -11,9 +11,15 @@ public class SpringHelloApp {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach coach = context.getBean("myCoach", Coach.class);
+        Coach baseballCoach = context.getBean("baseballCoach", Coach.class);
 
-        System.out.println(coach.getDailyWorkout());
+        System.out.println(baseballCoach.getDailyWorkout());
+        System.out.println(baseballCoach.getDailyFortune());
+
+        Coach trackCoach = context.getBean("trackCoach", Coach.class);
+
+        System.out.println(trackCoach.getDailyWorkout());
+        System.out.println(trackCoach.getDailyFortune());
 
         context.close();
     }

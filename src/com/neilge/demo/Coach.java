@@ -6,4 +6,6 @@ package com.neilge.demo;
 public interface Coach {
 
     String getDailyWorkout();
+
+    String getDailyFortune();
 }
