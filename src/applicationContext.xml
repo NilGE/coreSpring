@@ -25,6 +25,12 @@
         <constructor-arg ref="myFortuneService" />
     </bean>
 
+    <bean id="cricketCoach"
+        class="com.neilge.demo.CricketCoach">
+        <property name="fortuneService" ref="myFortuneService" />
+        <property name="emailAddress" value="neilge001@gmail.com" />
+        <property name="team" value="New York Yankee" />
+    </bean>
 </beans>
 
 
